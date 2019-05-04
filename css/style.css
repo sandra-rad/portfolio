@@ -3,103 +3,152 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
+  transition: all 0.25s ease-in-out;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 5% 90% 5%;
+  grid-template-columns: 3% 94% 3%;
   background-color: #fff;
   transition: all 0.5s ease-out;
 }
 .grid-container .first {
   grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-end: 3;
+  padding: 10px 0;
 }
-.grid-container .second {
-  height: 550px;
+.grid-container .first .span-cv {
+  float: right;
 }
-.grid-container .second .menu-wrapper {
-  transform: rotate(90deg);
-  cursor: pointer;
-}
-.grid-container .second .menu-wrapper .menu-line {
+.grid-container .third {
+  background: white;
   display: flex;
   justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
-.grid-container .second .menu-wrapper .menu-line span {
+.grid-container .third .menu-wrapper {
+  cursor: pointer;
+  transform: rotate(-90deg) translateY(30%);
+  transform-origin: center center;
+}
+.grid-container .third .menu-wrapper .menu-line {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  align-items: flex-end;
+}
+.grid-container .third .menu-wrapper .menu-line span {
   background-color: #000;
   width: 2px;
   height: 25px;
-  margin: 2px;
+  display: block;
+  margin: 0 2px;
 }
-.grid-container .second .menu-wrapper .menu-line span:nth-child(1) {
+.grid-container .third .menu-wrapper .menu-line span:nth-child(1) {
   height: 15px;
 }
-.grid-container .second .menu-wrapper .menu-line span:nth-child(3) {
+.grid-container .third .menu-wrapper .menu-line span:nth-child(3) {
   height: 20px;
 }
-.grid-container .second .menu-wrapper .menu-text {
+.grid-container .third .menu-wrapper .menu-text {
   display: flex;
   justify-content: center;
-  transform: translateY(-50px) rotate(180deg);
 }
-.grid-container .second .menu-wrapper .menu-text span {
+.grid-container .third .menu-wrapper .menu-text span {
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2px;
 }
-.grid-container .second .menu-wrapper:hover .menu-line span:nth-child(1) {
-  height: 20px;
+.grid-container .third .exit-wrapper {
+  display: none;
 }
-.grid-container .second .menu-wrapper:hover .menu-line span:nth-child(2) {
-  height: 30px;
+.grid-container .menu-wrapper:hover .third {
+  width: 100px !important;
+  z-index: 1;
 }
-.grid-container .second .menu-wrapper:hover .menu-line span:nth-child(3) {
+.grid-container .menu-wrapper:hover .menu-line span:nth-child(1) {
   height: 25px;
 }
-.grid-container .grid-item.third {
+.grid-container .menu-wrapper:hover .menu-line span:nth-child(2) {
+  height: 40px;
+}
+.grid-container .menu-wrapper:hover .menu-line span:nth-child(3) {
+  height: 30px;
+}
+.grid-container .menu-wrapper:hover .menu-text span:nth-child(2),
+.grid-container .menu-wrapper:hover .menu-text span:nth-child(4) {
+  transform: translateY(-15%);
+}
+.grid-container .menu-wrapper:hover .menu-text span:nth-child(1),
+.grid-container .menu-wrapper:hover .menu-text span:nth-child(3) {
+  transform: translateY(15%);
+}
+.grid-container .grid-item.four {
   background: linear-gradient(to right, #ffb914 0%, #ffb914 50%, #f8f8f8 50%, #f8f8f8 100%);
   height: 550px;
 }
-.grid-container .grid-item.third .hello-message-wrapper {
+.grid-container .grid-item.four .hello-message-wrapper {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.grid-container .grid-item.third .hello-message-wrapper .hello-message {
+.grid-container .grid-item.four .hello-message-wrapper .hello-message {
   font-size: 8.5rem;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
 }
-.grid-container .grid-item.third .hello-message-wrapper .hello-message span {
+.grid-container .grid-item.four .hello-message-wrapper .hello-message span {
   color: #ffb914;
 }
-.grid-container .four {
+.grid-container .grid-item.four .menu-list {
+  display: none;
+}
+.grid-container .grid-item.four .menu-list ul {
+  list-style: none;
+  line-height: 1.6;
+}
+.grid-container .grid-item.four .menu-list ul a {
+  color: #000;
+  text-decoration: none;
+}
+.grid-container .grid-item.four .menu-list ul a li {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: Roboto Slab, sans-serif;
+}
+.grid-container .grid-item.four .menu-list .addresse {
+  display: flex;
+  flex-direction: column;
+}
+.grid-container .grid-item.four .menu-list .addresse .street {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+.grid-container .grid-item.four .menu-list .addresse a {
+  text-decoration: none;
+  color: black;
+  font-weight: 650;
+  font-size: 0.9rem;
+}
+.grid-container .five {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 5px;
 }
-.grid-container .four i {
+.grid-container .five a {
+  color: #000;
+}
+.grid-container .five a i {
   padding: 5px 0;
 }
-.grid-container .five {
+.grid-container .six {
   grid-column-start: 1;
   grid-column-end: 4;
-}
-.grid-container .scroll-cv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: translate(-1%, -120%);
-}
-.grid-container .scroll-cv span {
-  writing-mode: vertical-lr;
-  font-size: 10px;
-  font-weight: 900;
 }
 
 /*# sourceMappingURL=style.css.map */
