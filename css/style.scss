@@ -1,0 +1,117 @@
+@import 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $base-font-family;
+    }
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 5% 90% 5%; //1fr 8fr 1fr;
+    background-color: #fff;
+    transition: all 0.5s ease-out;
+    
+    .grid-item{
+        
+    }
+    .first{
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    .second{
+        height: 550px;
+        .menu-wrapper{
+            transform: rotate(90deg);
+            cursor: pointer;
+        .menu-line{
+            display: flex;
+            justify-content: center;
+           
+            span{
+                background-color: #000;
+                width: 2px;
+                height: 25px;
+                margin: 2px;
+            }
+            span:nth-child(1){
+                height: 15px;
+            }
+            span:nth-child(3){
+                height: 20px;
+            }
+        }
+        .menu-text{
+            display: flex;
+            justify-content: center;
+            transform: translateY(-50px) rotate(180deg);
+            span{
+                font-size: 10px;
+                font-weight: 700;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    .menu-wrapper:hover{
+        .menu-line{
+            
+            span:nth-child(1){
+                height: 20px;
+            }
+            span:nth-child(2){
+                height: 30px;
+            }
+            span:nth-child(3){
+                height: 25px;
+            }
+        }
+    }
+    }
+    .grid-item.third{
+        background: linear-gradient(to right,  $primary 0%, $primary 50%,#f8f8f8 50%,#f8f8f8 100%);
+        height: 550px;
+        .hello-message-wrapper{
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            .hello-message{
+                font-size: 8.5rem;
+                font-weight: 700;
+                font-family: $second-font-family;
+                span{
+                    color: $primary;
+                }
+            }
+    }
+    }
+    .four{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        i{
+            padding: 5px 0;
+        }
+    }
+    .five{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    
+    }
+    .scroll-cv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    transform: translate(-1%, -120%);
+        span{
+            writing-mode: vertical-lr;
+            font-size: 10px;
+            font-weight: 900;
+        }
+    }
+}
