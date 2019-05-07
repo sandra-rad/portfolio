@@ -8,9 +8,12 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: 3% 94% 3%;
+  grid-template-columns: 50px calc(100% - 100px) 50px;
+  grid-template-rows: 50px calc(100vh - 100px) 50px;
   background-color: #fff;
+  height: 100vh;
   transition: all 0.5s ease-out;
+  overflow: 3;
 }
 .grid-container .first {
   grid-column-start: 2;
@@ -85,8 +88,8 @@
   transform: translateY(15%);
 }
 .grid-container .grid-item.four {
-  background: linear-gradient(to right, #ffb914 0%, #ffb914 50%, #f8f8f8 50%, #f8f8f8 100%);
-  height: 550px;
+  background: linear-gradient(to right, #f1b32a 0%, #f1b32a 50%, #f8f8f8 50%, #f8f8f8 100%);
+  height: 100%;
 }
 .grid-container .grid-item.four .hello-message-wrapper {
   height: 100%;
@@ -97,14 +100,19 @@
 }
 .grid-container .grid-item.four .hello-message-wrapper .hello-message {
   font-size: 8.5rem;
-  font-weight: 700;
-  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  letter-spacing: 8px;
+  font-family: "Raleway", sans-serif;
 }
 .grid-container .grid-item.four .hello-message-wrapper .hello-message span {
-  color: #ffb914;
+  color: #f1b32a;
 }
 .grid-container .grid-item.four .menu-list {
   display: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
 }
 .grid-container .grid-item.four .menu-list ul {
   list-style: none;
@@ -122,6 +130,7 @@
 .grid-container .grid-item.four .menu-list .addresse {
   display: flex;
   flex-direction: column;
+  margin-top: 15px;
 }
 .grid-container .grid-item.four .menu-list .addresse .street {
   font-size: 0.8rem;
@@ -132,6 +141,88 @@
   color: black;
   font-weight: 650;
   font-size: 0.9rem;
+}
+.grid-container .grid-item.four .films-content {
+  padding: 50px;
+}
+.grid-container .grid-item.four .films-content .wrapper-films-content {
+  width: 100%;
+  height: 450px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.grid-container .grid-item.four .films-content .wrapper-films-content .films-content-slider {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-color: #ffffff;
+}
+.grid-container .grid-item.four .films-content .wrapper-films-content .films-content-slider .slider-for {
+  width: 23%;
+  color: black;
+  padding: 20px;
+  line-height: 1.6;
+}
+.grid-container .grid-item.four .films-content .wrapper-films-content .films-content-slider .slider-for h2 {
+  margin-bottom: 15px;
+  color: #f1b32a;
+}
+.grid-container .grid-item.four .films-content .wrapper-films-content .films-content-slider .slider-for h4 {
+  margin-bottom: 10px;
+}
+.grid-container .grid-item.four .films-content .wrapper-films-content .films-content-slider .slider-nav {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-container .grid-item.four .films-content .wrapper-films-content .films-content-slider .slick-arrows {
+  width: 7%;
+  background: linear-gradient(to top, #3D5063 0%, #3D5063 50%, #f8f8f8 50%, #f8f8f8 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.grid-container .grid-item.four .about-wrapper {
+  display: none;
+  height: 100%;
+  display: flex;
+}
+.grid-container .grid-item.four .about-wrapper .about-title {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.grid-container .grid-item.four .about-wrapper .about-title span {
+  font-size: 6.5rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+.grid-container .grid-item.four .about-wrapper .about-description {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  justify-content: center;
+  line-height: 1.6;
+}
+.grid-container .grid-item.four .about-wrapper .about-description .about-job {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+.grid-container .grid-item.four .about-wrapper .about-description .about-me-text {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.grid-container .grid-item.four .about-wrapper .about-description .about-motto {
+  margin-bottom: 15px;
+  font-style: italic;
 }
 .grid-container .five {
   display: flex;
