@@ -219,6 +219,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  z-index: 1;
 }
 .grid-container .third .menu-wrapper {
   z-index: 1010;
