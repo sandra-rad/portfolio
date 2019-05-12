@@ -3,7 +3,197 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.page .menu {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0%;
+  left: 0;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: 1000;
+}
+.page .menu ul {
+  position: relative;
+  transform: translateX(-150%);
+  transition: all 0.3s ease-in-out;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.content .hello-message-wrapper {
+  background: linear-gradient(to right, #f1b32a 0%, #f1b32a 50%, #f8f8f8 50%, #f8f8f8 100%);
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.content .hello-message-wrapper .hello-message {
+  font-size: 8.5rem;
+  font-weight: 900;
+  letter-spacing: 8px;
+  font-family: "Raleway", sans-serif;
+}
+.content .hello-message-wrapper .hello-message span {
+  color: #f1b32a;
+}
+
+.other-pages {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.other-pages .pag {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  opacity: 1;
+}
+.other-pages .pag.open {
+  opacity: 1;
+  z-index: 100;
+}
+.other-pages .pag.about .about-wrapper {
+  height: 100%;
+  display: flex;
+  background: linear-gradient(to right, #f8f8f8 0%, #f8f8f8 30%, #f1b32a 30%, #f1b32a 100%);
+}
+.other-pages .pag.about .about-wrapper .about-title {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.other-pages .pag.about .about-wrapper .about-title span {
+  font-size: 6.5rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+.other-pages .pag.about .about-wrapper .about-description {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  justify-content: center;
+  line-height: 1.6;
+}
+.other-pages .pag.about .about-wrapper .about-description .about-job {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  padding-left: 15px;
+}
+.other-pages .pag.about .about-wrapper .about-description .about-me-text {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+.other-pages .pag.about .about-wrapper .about-description .about-motto {
+  margin-bottom: 15px;
+  font-style: italic;
+  font-size: 14px;
+}
+.other-pages .pag.about .about-wrapper .about-description .about-motto h4 {
+  padding-left: 15px;
+}
+.other-pages .pag.films {
+  background-color: #f8f8f8;
+}
+.other-pages .pag.films .films-content {
+  height: 100%;
+}
+.other-pages .pag.films .films-content .wrapper-films-content {
+  height: 100%;
+}
+.other-pages .pag.films .films-content .wrapper-films-content .films-content-slider {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.other-pages .pag.films .films-content .wrapper-films-content .films-content-slider .slider-for {
+  padding: 80px !important;
+  width: 30%;
+  color: black;
+  padding: 20px;
+  line-height: 1.6;
+}
+.other-pages .pag.films .films-content .wrapper-films-content .films-content-slider .slider-for h2 {
+  margin-bottom: 15px;
+  color: #f1b32a;
+}
+.other-pages .pag.films .films-content .wrapper-films-content .films-content-slider .slider-for h4 {
+  margin-bottom: 10px;
+}
+.other-pages .pag.films .films-content .wrapper-films-content .films-content-slider .slider-nav {
+  width: 63%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.other-pages .pag.films .films-content .wrapper-films-content .films-content-slider .slick-arrows {
+  width: 7%;
+  background: linear-gradient(to top, #3d5063 0%, #3d5063 50%, #f1b32a 50%, #f1b32a 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.other-pages .pag.contact {
+  background: #3d5063;
+}
+
+.page.open .menu {
+  width: 85%;
+}
+.page.open .menu ul {
+  transform: translateX(0%);
+  transition-delay: 0.3s;
+  list-style: none;
+  line-height: 1.6;
+  padding: 100px;
+}
+.page.open .menu ul li {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: Roboto Slab, sans-serif;
+}
+.page.open .content {
+  width: 70%;
+  left: 85%;
+}
+
+.page.not-home .content {
+  left: 100%;
+}
+.page.not-home .pag.open {
+  left: -100%;
+}
+.page.not-home.open .pag.open {
+  left: -70%;
 }
 
 .grid-container {
@@ -31,6 +221,7 @@
   cursor: pointer;
 }
 .grid-container .third .menu-wrapper {
+  z-index: 1010;
   cursor: pointer;
   transform: rotate(-90deg) translateY(30%);
   transform-origin: center center;
@@ -63,166 +254,32 @@
   font-weight: 700;
   letter-spacing: 2px;
 }
-.grid-container .third .exit-wrapper {
+.grid-container .third .menu-wrapper .exit-wrapper {
   display: none;
 }
-.grid-container .menu-wrapper:hover .third {
+.grid-container .third .menu-wrapper:hover .third {
   width: 100px !important;
   z-index: 1;
 }
-.grid-container .menu-wrapper:hover .menu-line span:nth-child(1) {
+.grid-container .third .menu-wrapper:hover .menu-line span:nth-child(1) {
   height: 25px;
 }
-.grid-container .menu-wrapper:hover .menu-line span:nth-child(2) {
+.grid-container .third .menu-wrapper:hover .menu-line span:nth-child(2) {
   height: 40px;
 }
-.grid-container .menu-wrapper:hover .menu-line span:nth-child(3) {
+.grid-container .third .menu-wrapper:hover .menu-line span:nth-child(3) {
   height: 30px;
 }
-.grid-container .menu-wrapper:hover .menu-text span:nth-child(2),
-.grid-container .menu-wrapper:hover .menu-text span:nth-child(4) {
+.grid-container .third .menu-wrapper:hover .menu-text span:nth-child(2),
+.grid-container .third .menu-wrapper:hover .menu-text span:nth-child(4) {
   transform: translateY(-15%);
 }
-.grid-container .menu-wrapper:hover .menu-text span:nth-child(1),
-.grid-container .menu-wrapper:hover .menu-text span:nth-child(3) {
+.grid-container .third .menu-wrapper:hover .menu-text span:nth-child(1),
+.grid-container .third .menu-wrapper:hover .menu-text span:nth-child(3) {
   transform: translateY(15%);
 }
 .grid-container .grid-item.four {
-  background: linear-gradient(to right, #f1b32a 0%, #f1b32a 50%, #f8f8f8 50%, #f8f8f8 100%);
   height: 100%;
-}
-.grid-container .grid-item.four .hello-message-wrapper {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.grid-container .grid-item.four .hello-message-wrapper .hello-message {
-  font-size: 8.5rem;
-  font-weight: 900;
-  letter-spacing: 8px;
-  font-family: "Raleway", sans-serif;
-}
-.grid-container .grid-item.four .hello-message-wrapper .hello-message span {
-  color: #f1b32a;
-}
-.grid-container .grid-item.four .menu-list {
-  display: none;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-}
-.grid-container .grid-item.four .menu-list ul {
-  list-style: none;
-  line-height: 1.6;
-}
-.grid-container .grid-item.four .menu-list ul a {
-  color: #000;
-  text-decoration: none;
-}
-.grid-container .grid-item.four .menu-list ul a li {
-  font-size: 2rem;
-  font-weight: 700;
-  font-family: Roboto Slab, sans-serif;
-}
-.grid-container .grid-item.four .menu-list .addresse {
-  display: flex;
-  flex-direction: column;
-  margin-top: 15px;
-}
-.grid-container .grid-item.four .menu-list .addresse .street {
-  font-size: 0.8rem;
-  line-height: 1.4;
-}
-.grid-container .grid-item.four .menu-list .addresse a {
-  text-decoration: none;
-  color: black;
-  font-weight: 650;
-  font-size: 0.9rem;
-}
-.grid-container .grid-item.four .films-content {
-  padding: 50px;
-}
-.grid-container .grid-item.four .films-content .wrapper-films-content {
-  width: 100%;
-  height: 450px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-.grid-container .grid-item.four .films-content .wrapper-films-content .films-content-slider {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  background-color: #ffffff;
-}
-.grid-container .grid-item.four .films-content .wrapper-films-content .films-content-slider .slider-for {
-  width: 23%;
-  color: black;
-  padding: 20px;
-  line-height: 1.6;
-}
-.grid-container .grid-item.four .films-content .wrapper-films-content .films-content-slider .slider-for h2 {
-  margin-bottom: 15px;
-  color: #f1b32a;
-}
-.grid-container .grid-item.four .films-content .wrapper-films-content .films-content-slider .slider-for h4 {
-  margin-bottom: 10px;
-}
-.grid-container .grid-item.four .films-content .wrapper-films-content .films-content-slider .slider-nav {
-  width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.grid-container .grid-item.four .films-content .wrapper-films-content .films-content-slider .slick-arrows {
-  width: 7%;
-  background: linear-gradient(to top, #3D5063 0%, #3D5063 50%, #f8f8f8 50%, #f8f8f8 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.grid-container .grid-item.four .about-wrapper {
-  display: none;
-  height: 100%;
-  display: flex;
-}
-.grid-container .grid-item.four .about-wrapper .about-title {
-  width: 40%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.grid-container .grid-item.four .about-wrapper .about-title span {
-  font-size: 6.5rem;
-  font-weight: 700;
-  font-family: "Roboto", sans-serif;
-}
-.grid-container .grid-item.four .about-wrapper .about-description {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  padding: 100px;
-  justify-content: center;
-  line-height: 1.6;
-}
-.grid-container .grid-item.four .about-wrapper .about-description .about-job {
-  margin-bottom: 15px;
-  font-weight: 700;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-}
-.grid-container .grid-item.four .about-wrapper .about-description .about-me-text {
-  color: #ffffff;
-  margin-bottom: 15px;
-  font-weight: 700;
-  font-size: 18px;
-}
-.grid-container .grid-item.four .about-wrapper .about-description .about-motto {
-  margin-bottom: 15px;
-  font-style: italic;
 }
 .grid-container .five {
   display: flex;
