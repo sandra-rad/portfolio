@@ -1,21 +1,3 @@
-$('.menu-wrapper').on('click', function() {
-  $('.page').addClass('open');
- 
-});
-
-
-$('.menu li').on('click', function() {
-  var toOpen = $(this).attr('data-target');
-  if (toOpen != "content") {
-      $('.page').removeClass('open').addClass('not-home');
-      $('.pag.open').removeClass('open');
-      $('.' + toOpen).addClass('open');
-      //$('.to-load').load(pageToOpen + '.html');
-  } else {
-      $('.page').removeClass('open not-home');
-  }
-});
-
 $('.slider-for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,

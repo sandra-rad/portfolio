@@ -1,0 +1,237 @@
+<div class="pag about">
+    <div class="about-wrapper">
+        <div class="about-title"><span>Who<br> am I?</span></div>
+        <div class="about-description">
+            <span class="about-job"> <h3> UI/UX Designer</h3></span>
+            <span class="about-me-text">My name is Sandra Rad and I’m looking to learn how to
+                materialize all my
+                ideas into reality. Forme, the world around us is a source of inspiration and I
+                try to improve my skills every day so I can help develop better projects.
+            </span>
+            <span class="about-motto"> Motto: “Stay on your game and keep going for your dreams.
+                The world needs that special gift that only you have.”
+                — Marie Forleo
+            </span>
+        </div>
+
+    </div>
+
+</div>
+<div class="pag films">
+        <div class="films-content">
+                <div class="wrapper-films-content">
+                    <div class="films-content-slider">
+                        <div class="slider-for">
+                            <div><h2>Hope</h2><h4>SYNOPSIS:</h4> <p>A film about the day to day reality of a woman who fights with an ugly disease. Her story is the story of a lot of people this days, cancer being a common thing nowadays and a very painful one.</p> </div>
+                            <div><h2>Fragment 22</h2><h4>SYNOPSIS:</h4><p>December 22nd, 1989. In a village from the Sălaj country the spirit of the Revolution plays out not exactly as in the rest of the country. We witness what's happening through the eyes of a young policeman.</p> </div>
+                            <div><h2>Gimi is not in the film</h2><h4>SYNOPSIS:</h4> <p>A girl carrying a luggage. A desperate phone call. A storm and 2 men. The result: a short story with an unexpected ending.</p> </div>
+                        </div>
+                        <div class="slider-nav">
+                            <div>
+                                <iframe width="840" height="447" src="https://www.youtube.com/embed?v=LsZ39kgKGBU" frameborder="0">
+                                </iframe>
+                            </div>
+                            <div> 
+                                <iframe width="840" height="447" src="https://www.youtube.com/embed?v=EYUiTr7KXUQ" frameborder="0">
+                                </iframe>
+                            </div>
+                            <div>                                
+                                <iframe width="840" height="447" src="https://www.youtube.com/embed?v=BwAecMBMLAg" frameborder="0">
+                                </iframe>
+                            </div>
+
+                        </div>
+                        <div class="slick-arrows">
+                            <span class="prev">
+                                    <i class="fas fa-long-arrow-alt-up"></i>
+                            </span>
+                            <span class="next">
+                                    <i class="fas fa-long-arrow-alt-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</div>
+
+
+.other-pages {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 100%;
+    transition: all 0.3s ease-in-out;
+
+    .pag {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        opacity: 1;
+
+        &.open {
+            opacity: 1;
+            z-index: 100;
+        }
+
+        about {
+            .about-wrapper {
+                height: 100%;
+                display: flex;
+                background: linear-gradient(to right, #f8f8f8 0%, #f8f8f8 30%, #f1b32a 30%, #f1b32a 100%);
+
+                .about-title {
+                    width: 40%;
+                    display: flex;
+                    justify-content: flex-end;
+                    ;
+                    align-items: center;
+
+                    span {
+                        font-size: 6.5rem;
+                        font-weight: 700;
+                        font-family: $second-font-family;
+                    }
+                }
+
+                .about-description {
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 100px;
+                    justify-content: center;
+                    line-height: 1.6;
+
+                    .about-job {
+                        margin-bottom: 15px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        font-family: $second-font-family;
+                        padding-left: 15px;
+
+                    }
+
+                    .about-me-text {
+                        color: #ffffff;
+                        margin-bottom: 15px;
+                    }
+
+                    .about-motto {
+                        margin-bottom: 15px;
+                        font-style: italic;
+                        font-size: 14px;
+
+                        h4 {
+                            padding-left: 15px;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        &.films {
+            background-color: $light-grey;
+
+            .films-content {
+                height: 100%;
+
+                .wrapper-films-content {
+                    height: 100%;
+
+                    .films-content-slider {
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        height: 100%;
+
+                        .slider-for {
+                            padding: 80px !important;
+                            width: 30%;
+                            color: black;
+                            padding: 20px;
+                            line-height: 1.6;
+
+
+                            h2 {
+                                margin-bottom: 15px;
+                                color: $primary;
+
+                            }
+
+                            h4 {
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .slider-nav {
+                            width: 63%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                        }
+
+                        .slick-arrows {
+                            width: 7%;
+                            background: linear-gradient(to top, $secondary 0%, $secondary 50%, $primary 50%, $primary 100%);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.contact {
+            background: $secondary;
+        }
+    }
+}
+
+.page.open {
+    .menu {
+        width: 85%;
+
+        ul {
+            transform: translateX(0%);
+            transition-delay: 0.3s;
+            list-style: none;
+            line-height: 1.6;
+            padding: 100px;
+
+            li {
+                font-size: 2.5rem;
+                font-weight: 700;
+                font-family: Roboto Slab, sans-serif;
+            }
+
+        }
+    }
+
+    .content {
+        width: 70%;
+        left: 85%;
+    }
+}
+
+.page.not-home {
+    .content {
+        left: 100%;
+    }
+
+    .pag.open {
+        left: -100%;
+    }
+
+    &.open {
+        .pag.open {
+            left: -70%;
+        }
+    }
+}
