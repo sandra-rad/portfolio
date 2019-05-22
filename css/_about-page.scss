@@ -8,17 +8,15 @@
         background: linear-gradient(to right, #f8f8f8 0%, #f8f8f8 30%, #131111 30%, #131111 100%);
 
         .about-title {
-
-            width: 40%;
+            width: 30%;
             display: flex;
-            justify-content: flex-end;
             align-items: center;
             color: $primary;
-
+            justify-content: center;
             span {
-                font-size: 6.5rem;
+                font-size: 5rem;
                 font-weight: 700;
-                font-family: $second-font-family;
+                font-family: $second-font-family;  
             }
         }
 

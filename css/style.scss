@@ -9,20 +9,22 @@
 @import 'design-page';
 @import 'contact-page';
 
-.film{
+.film {
     grid-column-start: 2;
     grid-column-end: 3;
     height: 100vh;
-    background: linear-gradient(to right, $light-grey 0%, $light-grey 80%, $secondary 80%, $secondary 100%);
+    background: $light-grey;
     display: flex;
     justify-content: center;
     align-items: center;
+
     .films-content {
-        height: 80%;
-        width: 90%;
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        height: 100%;
+        width: 100%;
+
         .wrapper-films-content {
-            height:100%;
+            height: 100%;
+
             .films-content-slider {
                 height: 100%;
                 display: flex;
@@ -30,12 +32,13 @@
                 height: 100%;
 
                 .slider-for {
-                    padding: 80px !important;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                     width: 30%;
                     color: black;
                     padding: 20px;
                     line-height: 1.6;
-
 
                     h2 {
                         margin-bottom: 15px;
