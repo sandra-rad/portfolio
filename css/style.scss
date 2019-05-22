@@ -5,7 +5,66 @@
 @import 'homepage';
 @import 'social-media';
 @import 'about-page';
-@import 'films';
-@import 'design';
-@import 'contact';
+@import 'film-page';
+@import 'design-page';
+@import 'contact-page';
 
+.film{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    height: 100vh;
+    background: linear-gradient(to right, $light-grey 0%, $light-grey 80%, $secondary 80%, $secondary 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .films-content {
+        height: 80%;
+        width: 90%;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        .wrapper-films-content {
+            height:100%;
+            .films-content-slider {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                height: 100%;
+
+                .slider-for {
+                    padding: 80px !important;
+                    width: 30%;
+                    color: black;
+                    padding: 20px;
+                    line-height: 1.6;
+
+
+                    h2 {
+                        margin-bottom: 15px;
+                        color: $primary;
+
+                    }
+
+                    h4 {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .slider-nav {
+                    width: 63%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-right: 80px;
+                }
+
+                .slick-arrows {
+                    width: 7%;
+                    background: $primary;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
