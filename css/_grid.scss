@@ -1,0 +1,12 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 50px calc(100% - 100px) 50px;
+    grid-template-rows: 50px calc(100vh - 100px) 50px;
+    background-color: #fff;
+    height: 100vh;
+    transition: all 0.5s ease-out;
+    overflow: 3;
+    .grid-item {
+        position: relative;
+    }
+}

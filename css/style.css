@@ -6,30 +6,9 @@
   transition: all 0.3s ease-in-out;
 }
 
-.content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0%;
-  transition: all 0.3s ease-in-out;
-  overflow: hidden;
-}
-.content .hello-message-wrapper {
-  background: linear-gradient(to right, #f1b32a 0%, #f1b32a 50%, #f8f8f8 50%, #f8f8f8 100%);
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.content .hello-message-wrapper .hello-message {
-  font-size: 8.5rem;
-  font-weight: 900;
-  letter-spacing: 8px;
-  font-family: "Raleway", sans-serif;
-}
-.content .hello-message-wrapper .hello-message span {
-  color: #f1b32a;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .grid-container {
@@ -41,14 +20,18 @@
   transition: all 0.5s ease-out;
   overflow: 3;
 }
-.grid-container .first {
+.grid-container .grid-item {
+  position: relative;
+}
+
+.menu-wrapper {
   grid-column-start: 2;
   grid-column-end: 3;
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
 }
-.grid-container .first .menu ul {
+.menu-wrapper .menu ul {
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -58,19 +41,19 @@
   animation-delay: 0.5s;
   position: relative;
 }
-.grid-container .first .menu ul li {
+.menu-wrapper .menu ul li {
   padding: 0 10px;
   position: relative;
   z-index: 1;
   list-style-type: none;
 }
-.grid-container .first .menu ul li a {
+.menu-wrapper .menu ul li a {
   line-height: 1;
   display: block;
   position: relative;
   z-index: 2;
 }
-.grid-container .first .menu ul li.active:before {
+.menu-wrapper .menu ul li.active:before {
   content: "";
   z-index: 0;
   display: block;
@@ -81,96 +64,7 @@
   left: 0;
   bottom: 0px;
 }
-.grid-container .third {
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 1;
-}
-.grid-container .grid-item.four {
-  height: 100%;
-}
-.grid-container .five {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-}
-.grid-container .five a {
-  color: #000;
-}
-.grid-container .five a i {
-  padding: 5px 0;
-}
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h1 {
-  font-size: 32px;
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 30px;
-  line-height: 1;
-}
-h1 span {
-  font-size: 20px;
-  display: block;
-  font-style: italic;
-  margin-left: 20px;
-  opacity: 0.6;
-}
-
-p {
-  margin-bottom: 30px;
-  line-height: 1.4;
-  font-size: 14px;
-}
-
-.grid-item {
-  position: relative;
-}
-
-.info {
-  background: linear-gradient(to right, #f8f8f8 0%, #f8f8f8 30%, #f1b32a 30%, #f1b32a 100%);
-  height: 500px;
-}
-
-@keyframes bb {
-  from {
-    width: 0%;
-    height: 0%;
-  }
-  to {
-    width: 100%;
-    height: 100%;
-  }
-}
-@keyframes yb {
-  from {
-    width: 100%;
-    height: 0%;
-  }
-  to {
-    width: 100%;
-    height: 100%;
-  }
-}
-@keyframes profile {
-  from {
-    opacity: 0;
-    transform: scale(0.5) rotate(-45deg);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
-}
 @keyframes menu {
   from {
     opacity: 0;
@@ -181,14 +75,51 @@ p {
     top: 0px;
   }
 }
-@keyframes info {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.content-wrapper {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  height: 100vh;
 }
+.content-wrapper .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.content-wrapper .content .hello-message-wrapper {
+  background: linear-gradient(to right, #f1b32a 0%, #f1b32a 50%, #f8f8f8 50%, #f8f8f8 100%);
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.content-wrapper .content .hello-message-wrapper .hello-message {
+  font-size: 8.5rem;
+  font-weight: 900;
+  letter-spacing: 8px;
+  font-family: "Raleway", sans-serif;
+}
+.content-wrapper .content .hello-message-wrapper .hello-message span {
+  color: #f1b32a;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.social-media a {
+  color: #000;
+}
+.social-media a i {
+  padding: 5px 0;
+}
+
 .about {
   grid-column-start: 2;
   grid-column-end: 3;
@@ -234,11 +165,12 @@ p {
   margin-left: 20px;
   opacity: 0.6;
 }
+.about .about-wrapper .about-description p {
+  margin-bottom: 30px;
+  line-height: 1.4;
+  font-size: 14px;
+}
 .about .about-wrapper .about-description a {
-  line-height: 1;
-  display: block;
-  position: relative;
-  z-index: 2;
   color: #f1b32a;
 }
 .about .about-wrapper .about-description.active:before {
