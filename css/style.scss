@@ -6,8 +6,8 @@
     box-sizing: border-box;
     font-family: $base-font-family;
     transition: all 0.3s ease-in-out;
-}
 
+}
 .content {
     position: absolute;
     width: 100%;
@@ -36,7 +36,6 @@
         }
     }
 }
-
 
 .grid-container {
     display: grid;
@@ -122,8 +121,6 @@
             }
         }
     }
-
-
 }
 
 a {
@@ -152,9 +149,6 @@ p {
     line-height: 1.4;
     font-size: 14px;
 }
-
-// THE GRID 
-
 
 .grid-item {
     position: relative;
@@ -222,24 +216,22 @@ p {
         opacity: 1;
     }
 }
-
-.container {
-
     .about {
+        grid-column-start: 2;
+        grid-column-end: 3;
         height: 100vh;
-
         .about-wrapper {
             height: 100%;
             display: flex;
-            background: linear-gradient(to right, #f8f8f8 0%, #f8f8f8 30%, #4b4b4b 30%, #4b4b4b 100%);
+            background: linear-gradient(to right, #f8f8f8 0%, #f8f8f8 30%, #131111 30%, #131111 100%);
 
             .about-title {
 
                 width: 40%;
                 display: flex;
                 justify-content: flex-end;
-                ;
                 align-items: center;
+                color: $primary;
 
                 span {
                     font-size: 6.5rem;
@@ -280,6 +272,7 @@ p {
                     position: relative;
                     z-index: 2;
                     color: $primary;
+                   
                 }
 
                 &.active {
@@ -300,67 +293,3 @@ p {
             }
         }
     }
-
-    .films {
-       // background-color: $light-grey;
-        height: 100vh;
-        background: linear-gradient(to right, $primary 0%, $primary 50%, $light-grey 50%, $light-grey 100%);
-               
-
-        .films-content {
-            height: 100%;
-
-            .wrapper-films-content {
-                height: 100%;
-
-                .films-content-slider {
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    height: 100%;
-
-                    .slider-for {
-                        padding: 80px !important;
-                        width: 30%;
-                        color: black;
-                        padding: 20px;
-                        line-height: 1.6;
-
-
-                        h2 {
-                            margin-bottom: 15px;
-                            color: $light-grey;
-                        }
-
-                        h4 {
-                            margin-bottom: 10px;
-                            color: $light-grey;
-                        }
-                        p{
-                            color: #fff;
-                        }
-                    }
-
-                    .slider-nav {
-                        width: 63%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                    }
-
-                    .slick-arrows {
-                        width: 7%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                    
-                        
-                    }
-                }
-            }
-        }
-    }
-
-}
