@@ -5,6 +5,7 @@ $(document).ready(function() {
     fade: true,
     arrows: true,
     infinite: true,
+    cssEase: true,
     prevArrow: $(".prev"),
     nextArrow: $(".next"),
     asNavFor: ".slider-nav"
@@ -15,7 +16,7 @@ $(document).ready(function() {
     asNavFor: ".slider-for",
     dots: false,
     arrows: false,
-    cssEase: "",
+    cssEase: true,
     infinite: true,
     focusOnSelect: true
   });
