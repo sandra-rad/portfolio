@@ -1,4 +1,23 @@
 $(document).ready(function() {
+  $(".error").hide();
+  var widthV = $(window).width();  
+  if (widthV < 800  ) {
+    $(".grid-container").hide();
+    $(".error").show();
+    
+  }
+  $(window).resize(function(){
+    if ($(window).width() < 800) {  
+      $(".grid-container").hide();
+      $(".error").show();
+    }
+    else{
+      $(".grid-container").show();
+      
+    }     
+
+});
+
   $(".slider-for").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
