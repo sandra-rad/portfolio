@@ -11,9 +11,12 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,900&amp;subset=latin-ext" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-  <link rel="stylesheet" type="text/css" href="css/slick.css" />
-  <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap-reboot.css" />
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap-grid.css" />
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap-grid.css" />
+ 
+  <link rel="stylesheet" type="text/css" href="./css/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="./css/slick.css" />
 
   <link rel="stylesheet" href="css/style.css" />
   <title>MyPortfolio</title>
@@ -28,7 +31,7 @@
           <li><a href="#home-page">Home</a></li>
           <li><a href="#about-page">About</a></li>
           <li><a href="#work-page">Design</a></li>
-          <li><a href="#film-page">Film</a></li>
+          <li><a href="#film-section">Films</a></li>
         </ul>
       </div>
     </div>
@@ -57,7 +60,7 @@
           <h1>UI/UX Designer <span>Sandra Rad</span></h1>
           <p>
             My name is Sandra and I’m looking to learn how to materialize
-            all my ideas into reality. Forme, the world around us is a source
+            all my ideas into reality. For me, the world around us is a source
             of inspiration and I try to improve my skills every day so I can
             help develop better projects.
           </p>
@@ -87,6 +90,20 @@
             </div>
           </div>
         </div>
+        <div class="card horizontal site">
+            <div class="card-image">
+              <img src="./assets/images/vsvv_1.png">
+              <img src="./assets/images/vsvv_2.png">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>I worked at the implementation of this page.</p>
+              </div>
+              <div class="card-action">
+                <a href="https://vsvv.ch/">Check the page</a>
+              </div>
+            </div>
+          </div>
         <div class="card horizontal jsfiddle">
           <iframe width="100%" height="300" src="//jsfiddle.net/SandraRad/Lpn0k69y/embedded/"
             allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
@@ -99,6 +116,44 @@
             </div>
           </div>
         </div>
+        <div class="card horizontal jsfiddle">
+            <iframe width="100%" height="300" src="//jsfiddle.net/SandraRad/xgjvmkrt/embedded/"
+              allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>Small work</p>
+              </div>
+              <div class="card-action">
+                <a href="https://jsfiddle.net/SandraRad/xgjvmkrt/">Open in jsfiddle</a>
+              </div>
+            </div>
+          </div>
+          <div class="card horizontal jsfiddle">
+              <iframe width="100%" height="300" src="//jsfiddle.net/SandraRad/xnuow5t7/embedded/"
+                allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p>Small work</p>
+                </div>
+                <div class="card-action">
+                  <a href="https://jsfiddle.net/SandraRad/xgjvmkrt/">Open in jsfiddle</a>
+                </div>
+              </div>
+            </div>
+            <div class="card horizontal jsfiddle">
+                <iframe width="100%" height="300" src="//jsfiddle.net/SandraRad/d6ou3ez8/embedded/"
+                  allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <p>Small work</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="https://jsfiddle.net/SandraRad/d6ou3ez8/">Open in jsfiddle</a>
+                  </div>
+                </div>
+              </div>
+
+
         <div class="card horizontal xd">
           <video width="300" height="400" controls>
             <source src="files/Adobe XD-simulare aplicatie.mp4" type="video/mp4">
@@ -115,72 +170,86 @@
       </div>
     </div>
   </div>
-  <div class="grid-container" id="film-page">
-    <div class="film">
-      <div class="films-content">
-        <div class="wrapper-films-content">
-          <div class="films-content-slider">
+<section id="film-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-1">
+          <div class="prev"><i class="fas fa-chevron-left"></i></div>
+      </div>
+          <div class="col-10 one-time">
+              <div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-12">
+                    <div class="film-details">
+                      <h3>Hope</h3>
+                      <h5>SYNOPSIS:</h5>
+                      <p>A film about the day to day reality of a woman who fights with an ugly disease. Her story is the
+                        story of a lot of people this days, cancer being a common thing nowadays and a very painful one.
+                      </p>
+                      <p class="nom">Nominations at Transilvania International film Festival 2019 (Romanian Days-Short section), Docuart Fest 2018 and CinéDOC-Tbilisi
+                        </p>
+                  </div>
+                  </div>
+                  <div class="col-md-8 col-sm-12">
+                      <iframe width="100%" height="447" src="https://www.youtube.com/embed?v=LsZ39kgKGBU" frameborder="0">
+                      </iframe>
+                  </div>
+                </div>
+              </div>
+              <div>
+                  <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="film-details">
+                          <h3>Fragment 22</h3>
+                          <h5>SYNOPSIS:</h5>
+                          <p>December 22nd, 1989. In a village from the Sălaj country the spirit of the Revolution plays out not
+                            exactly as in the rest of the country. We witness what's happening through the eyes of a young
+                            policeman.</p> 
+                            <p class="nom">Nominations at Transilvania International film Festival 2017 (Romanian Days-Short section) and "Autumn at Voronet" International Film Festival 2017. Screenings at the "White Night of the Romanian Film", TIFF Chisinau.</p>
+                          </div>      
+                    </div>
+                    <div class="col-md-8 col-sm-12">
+                        <iframe width="100%" height="447" src="https://www.youtube.com/embed?v=EYUiTr7KXUQ" frameborder="0">
+                        </iframe>
+                    </div>
+                  </div>
+              </div>
+                <div>
+                    <div class="row">
+                      <div class="col-md-4 col-sm-12">
+                          <div class="film-details">
+                            <h3>Gimi is not in the film</h3>
+                            <h5>SYNOPSIS:</h5>
+                            <p>A girl carrying a luggage. A desperate phone call. A storm and 2 men. The result: a short story with
+                            an unexpected ending.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-8 col-sm-12">
+                          <iframe width="100%" height="447" src="https://www.youtube.com/embed?v=BwAecMBMLAg" frameborder="0">
+                          </iframe>
+                      </div>
+                    </div>
+                </div>
 
-            <div class="slider-for">
-              <div>
-                <h3>Hope</h3>
-                <h5>SYNOPSIS:</h5>
-                <p>A film about the day to day reality of a woman who fights with an ugly disease. Her story is the
-                  story of a lot of people this days, cancer being a common thing nowadays and a very painful one.</p>
-              </div>
-              <div>
-                <h3>Fragment 22</h3>
-                <h5>SYNOPSIS:</h5>
-                <p>December 22nd, 1989. In a village from the Sălaj country the spirit of the Revolution plays out not
-                  exactly as in the rest of the country. We witness what's happening through the eyes of a young
-                  policeman.</p>
-              </div>
-              <div>
-                <h3>Gimi is not in the film</h3>
-                <h5>SYNOPSIS:</h5>
-                <p>A girl carrying a luggage. A desperate phone call. A storm and 2 men. The result: a short story with
-                  an unexpected ending.</p>
-              </div>
             </div>
-            <div class="slider-nav">
-              <div>
-                <iframe width="700" height="447" src="https://www.youtube.com/embed?v=LsZ39kgKGBU" frameborder="0">
-                </iframe>
-              </div>
-              <div>
-                <iframe width="840" height="447" src="https://www.youtube.com/embed?v=EYUiTr7KXUQ" frameborder="0">
-                </iframe>
-              </div>
-              <div>
-                <iframe width="840" height="447" src="https://www.youtube.com/embed?v=BwAecMBMLAg" frameborder="0">
-                </iframe>
-              </div>
-
+            <div class="col-1">
+              <div class="next"><i class="fas fa-chevron-right"></i></div>
             </div>
-            <div class="slick-arrows">
-              <span class="prev">
-                <i class="fas fa-long-arrow-alt-right"></i>
-              </span>
-              <span class="next">
-                <i class="fas fa-long-arrow-alt-left"></i>
-              </span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-  </div>
+</section>
+</div>  
 
   <div class="error">Nu functioneaza pe aceasta dimeniune</div>
 
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/slick.js"></script>
-  <script src="js/script.js"></script>
+  <script src="./js/bootstrap.js"></script>
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="./js/slick.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
