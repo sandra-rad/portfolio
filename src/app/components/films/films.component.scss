@@ -1,0 +1,168 @@
+%clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  // &:after
+}
+
+// %clearfix
+
+.card-movie-wrapper {
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.3),
+    -9px -9px 16px rgba(255, 255, 255, 0.2);
+  margin: 0 auto;
+  height: 440px;
+  position: relative;
+  width: 840px;
+
+  &:hover {
+    .card-movie-carousel {
+      -webkit-transition: all 250ms ease-in-out;
+      -moz-transition: all 250ms ease-in-out;
+      transition: all 250ms ease-in-out;
+      bottom: 60px;
+      right: 40px;
+    }
+  }
+}
+
+.card-movie-carousel {
+  -webkit-transition: all 250ms ease-in-out 250ms;
+  -moz-transition: all 250ms ease-in-out 250ms;
+  transition: all 250ms ease-in-out 250ms;
+  height: 550px;
+  width: 840px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.card-movie-navigation {
+  background-color: #ffffff;
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 15;
+
+  a {
+    $arrow-size: 6px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    bottom: 0;
+    color: #aac8ca;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    right: 40px;
+  }
+}
+
+.card-movie {
+  -webkit-transition: all (250ms * 2) ease-in-out;
+  -moz-transition: all (250ms * 2) ease-in-out;
+  transition: all (250ms * 2) ease-in-out;
+  background-size: cover;
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: 20;
+
+  &__content {
+    left: 330px;
+    position: absolute;
+    top: 150px;
+  }
+
+  // &__content
+
+  &__title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+    margin-left: -4px;
+    text-transform: uppercase;
+  }
+
+  // &__title
+
+  &__details {
+    @extend %clearfix;
+    margin-bottom: 30px;
+    margin-top: 15px;
+
+    &-item {
+      display: block;
+      float: left;
+      margin-right: 20px;
+    }
+
+    // &-item
+
+    &-list {
+      @extend %clearfix;
+
+      li {
+        float: left;
+        margin-right: 5px;
+        padding-right: 6px;
+        position: relative;
+        list-style: none;
+
+        &:after {
+          content: "|";
+          position: absolute;
+          right: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    max-width: 390px;
+  }
+
+  .poster {
+    width: 35%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.card-movie--active {
+  opacity: 1;
+  z-index: 25;
+}
+
+.card-movie--light {
+  background-color: var(--light-grey);
+
+  [class*="__title"] {
+    color: #000000;
+  }
+}

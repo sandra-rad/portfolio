@@ -1,0 +1,29 @@
+<section class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light p-0"><a
+                        class="navbar-brand text-uppercase raleway font-s">Sandra Rad
+                    </a><button class="navbar-toggler border-0" type="button" data-toggle="collapse"
+                        data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+                        aria-label="Toggle navigation" (click)="isNavbarCollapsed = !isNavbarCollapsed">
+                        <fa-icon class="text-secondary"
+                            [icon]="isNavbarCollapsed ? ['fas' , 'bars'] : ['fas' , 'times']"></fa-icon>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarToggler"
+                        [ngClass]="isNavbarCollapsed ? '' : 'show'">
+                        <div class=" d-flex align-items-center justify-content-between w-100 navbar-collapse-custom">
+                            <ul class="navbar-nav align-items-center justify-content-end w-100">
+                                <li class="nav-item active"><a class="nav-link text-uppercase font-s raleway"
+                                        routerLink="/work">Work
+                                        <span class="sr-only">(current)</span></a></li>
+                                <li class="nav-item"><a class="nav-link text-uppercase font-s raleway"
+                                        routerLink="/films">Films</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>

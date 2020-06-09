@@ -1,0 +1,40 @@
+$colors: (
+  "primary": #f1b32a,
+  "secondary": #3d5063,
+  "light-gray": #f8f8f8,
+);
+
+@each $color-name, $color-value in $colors {
+  .text-#{$color-name} {
+    color: $color-value !important;
+  }
+}
+
+@each $color-name, $color-value in $colors {
+  .bg-#{$color-name} {
+    background-color: $color-value !important;
+  }
+}
+
+$fonts: (
+  "s": 14px,
+);
+
+@each $font-name, $font-value in $fonts {
+  .font-#{$font-name} {
+    font-size: $font-value !important;
+    font-weight: 500;
+  }
+}
+
+$font-family: (
+  "roboto": Roboto,
+  "raleway": Raleway,
+  "futura": Futura LT,
+);
+
+@each $font-name, $font-value in $font-family {
+  .#{$font-name} {
+    font-family: $font-value, sans-serif !important;
+  }
+}

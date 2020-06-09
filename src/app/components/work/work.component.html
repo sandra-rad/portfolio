@@ -1,0 +1,19 @@
+<section class="my-5" id="work">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center mb-5">/ My work</h1>
+        </div>
+        <div class="col-md-4 col-12" *ngFor="let item of projects">
+            <div class="card mb-5">
+                <img class="card-img-top" src="{{ item.img }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="raleway font-weight-bold">{{ item.title }}</h5>
+                    <p class="card-text roboto">{{ item.description }}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ item.link }}" class="roboto">Check this site</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

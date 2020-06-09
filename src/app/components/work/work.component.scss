@@ -1,0 +1,20 @@
+.card {
+    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.3),
+        -9px -9px 16px rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 0;
+
+    .card-img-top {
+        min-height: 200px;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 0;
+        padding: 10px;
+
+    }
+
+    .card-footer {
+        background: transparent;
+    }
+}

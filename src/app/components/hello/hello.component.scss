@@ -1,0 +1,37 @@
+.content-wrapper {
+  height: 100vh;
+
+  .content {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+
+    .hello-message-wrapper {
+      background: linear-gradient(
+        to right,
+        var(--primary) 0%,
+        var(--primary) 50%,
+        var(--light-grey) 50%,
+        var(--light-grey) 100%
+      );
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      .hello-message {
+        font-size: 8.5rem;
+        font-weight: 900;
+        letter-spacing: 8px;
+        font-family: var(--base-font-family);
+
+        span {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}
