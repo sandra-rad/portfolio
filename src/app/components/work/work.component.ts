@@ -26,7 +26,7 @@ export class WorkComponent implements OnInit {
       img: '/assets/images/mrgo.png',
       description:
         'I actively participated in the concept stage and implementation of a page. I worked with Photoshop, HTML, CSS, Javascript.',
-      link: 'http://mrgo.drinc.net/',
+      link: '/mrgo',
     },
     {
       title: 'Victoriabank CLUB',
@@ -44,7 +44,7 @@ export class WorkComponent implements OnInit {
     },
     {
       title: 'Angular Course',
-      img: '/assets/images/shop.png',
+      img: '/assets/images/porto.png',
       description:
         'I actively participated in the concept stage and implementation of a page. I worked with Photoshop, HTML, CSS, Javascript.',
       link: 'https://shop-6c47f.web.app/',

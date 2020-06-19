@@ -14,6 +14,7 @@ import { WorkComponent } from './components/work/work.component';
 import { FilmsComponent } from './components/films/films.component';
 import { AboutComponent } from './components/about/about.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
+import { MrgoComponent } from './components/work/mrgo/mrgo.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SocialMediaComponent } from './components/social-media/social-media.com
     FilmsComponent,
     AboutComponent,
     SocialMediaComponent,
+    MrgoComponent,
   ],
   imports: [
     BrowserModule,
