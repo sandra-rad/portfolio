@@ -1,0 +1,46 @@
+.article-gallery-wrapper {
+
+    .col-12,
+    .col-6 {
+        img {
+            object-fit: cover;
+            object-position: center;
+            box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.3),
+                -9px -9px 16px rgba(255, 255, 255, 0.2);
+            border: 1px solid #eee;
+            cursor: pointer;
+
+
+        }
+    }
+
+    .col-12 {
+        img {
+            max-height: 612px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .col-6 {
+        img {
+            max-height: 302px;
+            height: 100%;
+        }
+    }
+
+    .article-img-overlay {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        .article-extra-images {
+            font-size: 50px;
+            color: white;
+            position: absolute;
+            cursor: pointer;
+        }
+    }
+
+}

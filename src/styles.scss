@@ -4,8 +4,10 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
 @import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+@import 'src/assets/scss/lightbox';
 
 @import "src/assets/scss/variables";
 @import "src/assets/scss/fonts";
 @import "src/assets/scss/mixins";
 @import "src/assets/scss/general";
+@import 'src/assets/scss/custom-lightbox';

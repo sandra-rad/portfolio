@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HomepageComponent } from './homepage/homepage.component';
 import { BsNavbarComponent } from './components/bs-navbar/bs-navbar.component';
@@ -15,6 +16,7 @@ import { FilmsComponent } from './components/films/films.component';
 import { AboutComponent } from './components/about/about.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { MrgoComponent } from './components/work/mrgo/mrgo.component';
+import { LightboxModule } from './components/lightbox/lightbox.module';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { MrgoComponent } from './components/work/mrgo/mrgo.component';
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
+    BrowserAnimationsModule,
     CarouselModule,
+    LightboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

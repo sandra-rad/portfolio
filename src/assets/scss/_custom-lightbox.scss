@@ -1,0 +1,19 @@
+.lightbox {
+    .lb-outerContainer {
+        background-color: transparent;
+        height: 100% !important;
+
+        .lb-image {
+            border: 0;
+        }
+    }
+
+    .lb-dataContainer {
+        .lb-details {
+            span {
+                font-weight: normal;
+                color: $white;
+            }
+        }
+    }
+}
